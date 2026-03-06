@@ -1,0 +1,56 @@
+# 项目指令
+
+> 请根据你的项目实际情况修改以下内容
+
+## 技术栈
+
+- 框架：[填写，如 Next.js 14, React, Vue 等]
+- 语言：[填写，如 TypeScript, JavaScript 等]
+- 数据库：[填写，如 PostgreSQL, MySQL 等]
+- 其他：[填写其他重要技术]
+
+## 编码规范
+
+### TypeScript/JavaScript
+- 使用 [strict/non-strict] 模式
+- 使用 [single/double] quotes
+- 缩进：[2/4] 空格
+- 组件风格：[函数式/类组件]
+
+### 命名约定
+- 文件命名：[kebab-case/camelCase/PascalCase]
+- 变量命名：[camelCase]
+- 常量命名：[UPPER_CASE]
+
+## 项目结构
+
+```
+src/
+├── components/     # [说明]
+├── lib/           # [说明]
+├── app/           # [说明]
+└── types/         # [说明]
+```
+
+## 禁止事项
+
+- [ ] 不要修改 package.json 依赖版本（除非明确要求）
+- [ ] 不要使用 any 类型
+- [ ] 不要创建 .md 文档（除非明确要求）
+- [ ] [添加其他禁止事项]
+
+## 架构约定
+
+- API 路由：[说明位置和规范]
+- 状态管理：[说明使用的方案]
+- 样式方案：[CSS Modules/Tailwind/Styled Components]
+
+## 测试要求
+
+- 单元测试：[要求]
+- 集成测试：[要求]
+- 覆盖率：[要求]
+
+## 其他说明
+
+[添加项目特定的其他说明]
