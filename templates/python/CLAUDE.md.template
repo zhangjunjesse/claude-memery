@@ -1,0 +1,38 @@
+# Python 项目配置
+
+## 技术栈
+
+- Python 版本：3.10+
+- 框架：Django/FastAPI/Flask
+- 数据库：PostgreSQL/MySQL
+- ORM：SQLAlchemy/Django ORM
+
+## 编码规范
+
+- 遵循 PEP 8
+- 使用 type hints
+- 使用 f-strings 格式化字符串
+- 使用 pathlib 处理路径
+
+## 项目结构
+
+```
+src/
+├── api/           # API 路由
+├── models/        # 数据模型
+├── services/      # 业务逻辑
+├── utils/         # 工具函数
+└── tests/         # 测试
+```
+
+## 依赖管理
+
+- 使用 poetry 或 pip-tools
+- requirements.txt 锁定版本
+- 虚拟环境隔离
+
+## 测试要求
+
+- 使用 pytest
+- 测试覆盖率 > 80%
+- 单元测试 + 集成测试
