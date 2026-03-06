@@ -51,6 +51,21 @@ src/
 - 集成测试：[要求]
 - 覆盖率：[要求]
 
+## Auto Memory 使用
+
+Claude 会自动在 `~/.claude/projects/<project-hash>/memory/MEMORY.md` 保存项目记忆。
+
+**如何触发记忆保存**：
+- 明确说"记住..."
+- AI 会自动观察重复模式和用户纠正
+
+**查看和管理**：
+- 使用 `/memory` 命令查看
+- 直接编辑 MEMORY.md 文件管理记忆
+- 前 200 行会自动加载到上下文
+
+详见：[记忆系统使用指南](../docs/memory-guide.md)
+
 ## 其他说明
 
 [添加项目特定的其他说明]

@@ -55,7 +55,19 @@ cp -r project/.claude your-project/
 
 ## Auto Memory
 
-Claude 会自动在 `~/.claude/projects/<project>/memory/MEMORY.md` 保存项目记忆，无需手动配置。
+Claude 会自动在 `~/.claude/projects/<project-hash>/memory/MEMORY.md` 保存项目记忆。
+
+**位置说明**：
+- 不在项目目录的 `.claude/` 里
+- 由 Claude 自动管理，路径基于项目哈希值
+- 前 200 行自动加载到上下文
+
+**使用方式**：
+- 明确说"记住..."触发保存
+- 使用 `/memory` 命令查看
+- 直接编辑文件管理记忆
+
+详见：[docs/memory-guide.md](./docs/memory-guide.md)
 
 ## 许可
 
