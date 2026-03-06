@@ -1,65 +1,61 @@
-# Claude Code 记忆系统配置模板
+# Claude Code 配置模板
 
-> 基于 Claude Code 的记忆系统和配置文件最佳实践
+> Claude Code 全局和项目级配置模板
 
 ## 简介
 
-这是一个 Claude Code 配置模板仓库，提供：
-- **全局配置模板** - 用于 `~/.claude/`
-- **项目配置模板** - 用于不同类型项目
-- 记忆系统使用指南
-- 最佳实践
+提供 Claude Code 的配置模板：
+- **全局配置** (`~/.claude/`) - 个人偏好和通用规则
+- **项目配置** (`.claude/`) - 项目特定的规则和工具
 
 ## 目录结构
 
 ```
 .
-├── global/                     # 全局配置模板
+├── global/                     # 全局配置模板 (~/.claude/)
 │   ├── CLAUDE.md.template     # 全局个人偏好
 │   └── .claude/
-│       └── rules/             # 通用规则
-├── templates/                  # 项目配置模板
-│   ├── react/                 # React 项目
-│   ├── nodejs/                # Node.js 后端
-│   └── python/                # Python 项目
-└── docs/                      # 文档
-    ├── memory-guide.md
-    └── config-guide.md
+│       ├── settings.json.template
+│       ├── rules/             # 通用代码规则
+│       ├── commands/          # 全局命令
+│       ├── skills/            # 全局技能
+│       └── agents/            # 全局代理
+└── project/                   # 项目配置模板 (.claude/)
+    ├── CLAUDE.md.template     # 项目说明
+    └── .claude/
+        ├── settings.json.template
+        ├── rules/             # 项目规则
+        ├── commands/          # 项目命令
+        ├── skills/            # 项目技能
+        └── agents/            # 项目代理
 ```
 
 ## 使用方法
 
-### 1. 设置全局配置（可选）
+### 全局配置
 
 ```bash
-# 复制全局配置到用户目录
+# 复制到用户目录
 cp global/CLAUDE.md.template ~/.claude/CLAUDE.md
-cp -r global/.claude/rules ~/.claude/rules
+cp global/.claude/settings.json.template ~/.claude/settings.json
+cp -r global/.claude/rules ~/.claude/
 
 # 根据个人偏好修改
 ```
 
-### 2. 设置项目配置
+### 项目配置
 
 ```bash
-# 选择合适的模板（react/nodejs/python）
-cp -r templates/react/.claude your-project/.claude
-cp templates/react/CLAUDE.md.template your-project/CLAUDE.md
+# 复制到项目目录
+cp project/CLAUDE.md.template your-project/CLAUDE.md
+cp -r project/.claude your-project/
 
 # 根据项目需求修改
 ```
 
-### 3. 使用记忆系统
+## Auto Memory
 
-Claude 会自动：
-- 加载全局和项目配置
-- 创建 Auto Memory
-- 跨会话记住项目知识
-
-## 参考文档
-
-- [Claude Code 记忆系统原理](./docs/memory-guide.md)
-- [配置文件使用指南](./docs/config-guide.md)
+Claude 会自动在 `~/.claude/projects/<project>/memory/MEMORY.md` 保存项目记忆，无需手动配置。
 
 ## 许可
 
